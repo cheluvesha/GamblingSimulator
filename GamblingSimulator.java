@@ -45,9 +45,13 @@ class GamblingSimulator
 
              				int gameResult = getRandom();
                 			if (gameResult > 0)
+						
         		       			++initialAmount;
+					
                 			else
+						
 						--initialAmount;
+					
 				}
 	
 				// Condition to resign for the day
@@ -74,11 +78,17 @@ class GamblingSimulator
 
 			// Condition to print Overall Loss or Overall Win
 			if(monthLoss > monthWin)
+				
 				System.out.println("The total amount lost is $"+(monthLoss - monthWin));
+			
 			else if(monthLoss == monthWin)
+				
 				System.out.println("The Loss or Win is $0");
+			
 			else
+				
 				System.out.println("The total amount Won is $"+(monthWin - monthLoss));
+			
         	}
 
 public static void main(String args[])
