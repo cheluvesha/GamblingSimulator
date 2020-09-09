@@ -5,7 +5,7 @@ class GamblingSimulator{
         final static int betAmount=1;
         final static int stopOfWin=150;// 50% profit with additional to initial amount
         final static int stopOfLoss=50;// 50% loss with respect to initialamount
-        static int twentyDayLoss=0,twentyDayWin=0;
+        static int monthLoss=0, monthWin=0;// to store month loss and win
         // Welcome message
         private static void welcomeMsg(){
                 System.out.println("Gambling will be started with $"+initialAmount+" and the bet amount will be $"+betAmount);
@@ -16,12 +16,12 @@ class GamblingSimulator{
                 Random random=new Random();
                 return random.nextInt(2);
         }
-        // 20 days report
-        private static void getTwentyDaysReport(){
-                for( int day=1; day<=20; day++ ){
+        // Generate Month report
+        private static void monthReport(){
+                for( int day=1; day<=30; day++ ){
 
                 initialAmount=100;
-                // Daily report start
+                // Daily report
                 while(initialAmount > stopOfLoss && initialAmount < stopOfWin){
                 int result=getRandom();
 
@@ -30,31 +30,33 @@ class GamblingSimulator{
 
                 else
                 --initialAmount;
-                }// Daily report end
-                // Condition for resign
+                }
+                // Condition to resign for the day
                 if(initialAmount == stopOfLoss){
                 System.out.println("He Lost $"+initialAmount+ " with the "+day+" day");
-                twentyDayLoss+=50;
+                monthLoss+=50;
                 }
                 else{
                 System.out.println("He Won $"+(initialAmount-100)+ " with the "+day+" day");
-                twentyDayWin+=50;
+                monthWin+=50;
         }
         }
-	System.out.println("<------------------------------------------------------>");
-        // Condition to check whether its a Loss Or Win with respect to Twenty days
-        if(twentyDayLoss > twentyDayWin)
-        System.out.println("The total amount lost is $"+(twentyDayLoss-twentyDayWin));
-        else if(twentyDayLoss == twentyDayWin)
+	System.out.println("<------------------------------------------------------->");
+        System.out.println("Month Loss is $"+monthLoss);
+        System.out.println("Month Wins is $"+monthWin);
+	System.out.println("<------------------------------------------------------->");
+	// Condition to print Overall Loss or Overall Win
+        if(monthLoss > monthWin)
+        System.out.println("The total amount lost is $"+(monthLoss-monthWin));
+        else if(monthLoss == monthWin)
         System.out.println("The Loss or Win is $0");
         else
-        System.out.println("The total amount Won is $"+(twentyDayWin-twentyDayLoss));
-        System.out.println("<------------------------------------------------------>");
+        System.out.println("The total amount Won is $"+(monthWin-monthLoss));
+        }
 
-}
 public static void main(String args[]){
         welcomeMsg();
-        getTwentyDaysReport();
+        monthReport();
 }
 }
 
