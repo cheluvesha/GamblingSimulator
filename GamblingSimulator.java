@@ -38,14 +38,12 @@ class GamblingSimulator{
                 if(initialAmount == stopOfLoss){
                 System.out.println("He Lost $"+initialAmount+ " with the "+day+" day");
                 monthLoss+=50;
-                luckyOrUnluckyAmount-=50;
-                storeAmount[day-1]=luckyOrUnluckyAmount;
+                storeAmount[day-1] = -50;
                 }
                 else{
                 System.out.println("He Won $"+(initialAmount-100)+ " with the "+day+" day");
                 monthWin+=50;
-                luckyOrUnluckyAmount+=50;
-                storeAmount[day-1]=luckyOrUnluckyAmount;
+                storeAmount[day-1] = 50;
                 }
         }
         System.out.println("<------------------------------------------------------->");
