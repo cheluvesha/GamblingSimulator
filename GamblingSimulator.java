@@ -45,7 +45,7 @@ class GamblingSimulator
             
 	 		}
 
-                	// Condition to check whether he has to resign for the day
+                	// Condition to check whether he has to resign for the day.
                 	if( initialAmount == STOP_IF_LOOSES )
 				
 	                	System.out.println("He Lost $"+initialAmount+ " for a day");
