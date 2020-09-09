@@ -97,9 +97,9 @@ class GamblingSimulator{
                             }
                     }
                     System.out.println("<--------------------------------------------------------------------------------------->");
-                    System.out.println();
                     System.out.println("The Luckiest day for the gambler is "+luckyDay);
                     System.out.println("The Unluckiest day for the gambler is "+unluckyDay);
+		    System.out.println("<--------------------------------------------------------------------------------------->");
                     System.out.println("The maximum win amount which gambler got is "+maxWin);
                     System.out.println("The maximum loss amount which gambler got is "+maxLoss);
                     }
