@@ -44,9 +44,13 @@ class GamblingSimulator
                 
 					int gameResult = getRandom();
                 			if (gameResult > 0)
+						
                 				++initialAmount;
+					
 					else
+						
                 				--initialAmount;
+					
                		 	}// Daily report end
                
 		 		// Condition for resign
