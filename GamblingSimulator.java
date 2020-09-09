@@ -11,6 +11,7 @@ class GamblingSimulator
         final static int STOP_IF_LOOSES = initialAmount - (int)(( percentage /  100 * initialAmount ));// 50% loss with respect to initialamount
         static int twentyDayLoss = 0, twentyDayWin = 0;
         final static int DAYS_LIMIT = 20; 
+	
 	// Welcome message
         private static void welcomeMsg()	
 	{
@@ -48,7 +49,7 @@ class GamblingSimulator
                 			--initialAmount;
                		 }// Daily report end
                
-		 // Condition for resign
+		 	// Condition for resign
                 	if(initialAmount == STOP_IF_LOOSES)
 			{
 	
