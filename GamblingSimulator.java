@@ -20,6 +20,7 @@ class GamblingSimulator
                 System.out.println("<---------------------------------------------------------------------------->");
 
         }
+
         // Random number generation
         private static int getRandom()
 	{
@@ -31,59 +32,61 @@ class GamblingSimulator
         
 	// Generate Month report
         private static void monthReport()	
-		{
+	{
         
-	        	for( int day = 1; day <= 30; day++ )
+	        for( int day = 1; day <= 30; day++ )
+		{
+
+               		initialAmount = 100;
+               	
+	 		// Daily report
+               		while(initialAmount > STOP_IF_LOOSES && initialAmount < STOP_IF_WIN)
 			{
 
-                		initialAmount = 100;
-               	
-		 		// Daily report
-                		while(initialAmount > STOP_IF_LOOSES && initialAmount < STOP_IF_WIN)
-				{
-
-                			int gameResult = getRandom();
-                			if (gameResult > 0)
-        		        		++initialAmount;
-                			else
-                				--initialAmount;
-               			 }
-	
-                		// Condition to resign for the day
-        		        if(initialAmount  == STOP_IF_LOOSES)
-				{
-	
-                			System.out.println("He Lost $"+initialAmount+ " with the "+day+" day");
-               				monthLoss += 50;
-        
-			       	}
+             			int gameResult = getRandom();
+                		if (gameResult > 0)
+        		       		++initialAmount;
                 		else
-				{
+               				--initialAmount;
+           		}
+	
+                	// Condition to resign for the day
+        	        if(initialAmount  == STOP_IF_LOOSES)
+			{
+	
+              			System.out.println("He Lost $"+initialAmount+ " with the "+day+" day");
+               			monthLoss += 50;
+        
+			}
+                	else
+			{
                 
-					System.out.println("He Won $"+(initialAmount-100)+ " with the "+day+" day");
-                			monthWin += 50;
+				System.out.println("He Won $"+(initialAmount-100)+ " with the "+day+" day");
+               			monthWin += 50;
         			
-				}
-        			}
+			}
+        	}
 	
-				System.out.println("<------------------------------------------------------->");
-        			System.out.println("Month Loss is $"+monthLoss);
-        			System.out.println("Month Wins is $"+monthWin);
-				System.out.println("<------------------------------------------------------->");
+		System.out.println("<------------------------------------------------------->");
+        	System.out.println("Month Loss is $"+monthLoss);
+        	System.out.println("Month Wins is $"+monthWin);
+		System.out.println("<------------------------------------------------------->");
 	
-				// Condition to print Overall Loss or Overall Win
-        			if(monthLoss > monthWin)
-        				System.out.println("The total amount lost is $"+(monthLoss - monthWin));
-      				else if(monthLoss == monthWin)
-        				System.out.println("The Loss or Win is $0");
-        			else
-        				System.out.println("The total amount Won is $"+(monthWin - monthLoss));
-        			}
+		// Condition to print Overall Loss or Overall Win
+       		if(monthLoss > monthWin)
+        		System.out.println("The total amount lost is $"+(monthLoss - monthWin));
+      		else if(monthLoss == monthWin)
+     			System.out.println("The Loss or Win is $0");
+        	else
+        		System.out.println("The total amount Won is $"+(monthWin - monthLoss));
+        }
 
 public static void main(String args[])
 	{
+
         	welcomeMsg();
         	monthReport();
+
 	}
 	}
 
