@@ -9,7 +9,7 @@ class GamblingSimulator
 	static double percentage = 50.00;
         final static int STOP_IF_WIN = initialAmount + (int)(( percentage /  100 * initialAmount ));// 50% profit with additional to initial amount
         final static int STOP_IF_LOOSES = initialAmount - (int)(( percentage /  100 * initialAmount ));// 50% loss with respect to initialamount
-        static int twentyDayLoss=0,twentyDayWin = 0;
+        static int twentyDayLoss = 0, twentyDayWin = 0;
         final static int DAYS_LIMIT = 20; 
 	// Welcome message
         private static void welcomeMsg()	
@@ -49,32 +49,32 @@ class GamblingSimulator
                		 }// Daily report end
                
 		 // Condition for resign
-                if(initialAmount == STOP_IF_LOOSES)
-		{
+                	if(initialAmount == STOP_IF_LOOSES)
+			{
 	
-                	System.out.println("He Lost $"+initialAmount+ " with the "+day+" day");
-                	twentyDayLoss += 50;
+                		System.out.println("He Lost $"+initialAmount+ " with the "+day+" day");
+                		twentyDayLoss += 50;
         
-	        }
-                else
-		{
+		        }
+                	else
+			{
                 
-			System.out.println("He Won $"+(initialAmount - 100)+ " with the "+day+" day");
-        	        twentyDayWin += 50;
+				System.out.println("He Won $"+(initialAmount - 100)+ " with the "+day+" day");
+        	        	twentyDayWin += 50;
         	
-		}
-        	}
+			}
+        		}
 	
-	System.out.println("<------------------------------------------------------>");
+		System.out.println("<------------------------------------------------------>");
         
-	// Condition to check whether its a Loss Or Win with respect to Twenty days
-        if(twentyDayLoss > twentyDayWin)
-        	System.out.println("The total amount lost is $"+(twentyDayLoss - twentyDayWin));
-        else if(twentyDayLoss == twentyDayWin)
-       		System.out.println("The Loss or Win is $0");
-        else
-        	System.out.println("The total amount Won is $"+(twentyDayWin - twentyDayLoss));
-        System.out.println("<------------------------------------------------------>");
+		// Condition to check whether its a Loss Or Win with respect to Twenty days
+       		if(twentyDayLoss > twentyDayWin)
+        		System.out.println("The total amount lost is $"+(twentyDayLoss - twentyDayWin));
+        	else if(twentyDayLoss == twentyDayWin)
+       			System.out.println("The Loss or Win is $0");
+       		else
+        		System.out.println("The total amount Won is $"+(twentyDayWin - twentyDayLoss));
+        	System.out.println("<------------------------------------------------------>");
 
 	}
 	
