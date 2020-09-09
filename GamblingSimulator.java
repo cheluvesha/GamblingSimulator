@@ -70,11 +70,17 @@ class GamblingSimulator
         
 			// Condition to check whether its a Loss Or Win with respect to Twenty days
        			if(twentyDayLoss > twentyDayWin)
+				
         			System.out.println("The total amount lost is $"+(twentyDayLoss - twentyDayWin));
+			
         		else if(twentyDayLoss == twentyDayWin)
+				
        				System.out.println("The Loss or Win is $0");
+			
        			else
+				
         			System.out.println("The total amount Won is $"+(twentyDayWin - twentyDayLoss));
+			
         		System.out.println("<------------------------------------------------------>");
 
 		}
