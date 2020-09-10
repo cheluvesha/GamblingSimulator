@@ -85,11 +85,11 @@ class GamblingSimulator
         		System.out.println("<------------------------------------------------------->");
         
 			// Condition to print whether gambler made Profit or Loss at the month end.
-        		if(monthLoss > monthWin)
+        		if( monthLoss > monthWin )
         			
 				System.out.println("The Loss which gambler got at the end $"+(monthLoss - monthWin));
         		
-			else if(monthLoss == monthWin)
+			else if( monthLoss == monthWin )
         		
 				System.out.println("The Loss or Win is $0");
         
