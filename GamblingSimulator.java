@@ -30,7 +30,7 @@ class GamblingSimulator
                 	
 			int gameResult = getRandom();
         		System.out.println(result);
-        		if(gameResult > 0)
+        		if( gameResult > 0 )
         		System.out.println("Win");
        			else
         		System.out.println("Loss");
