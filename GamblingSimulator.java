@@ -11,7 +11,6 @@ class GamblingSimulator
         	final static int STOP_IF_LOOSES = stakeAmount - (int)(( percentage /  100 * stakeAmount ));// 50% loss with respect to stakeAmount	
 		static int monthLoss = 0, monthWin = 0;// to store month loss and win
         	static int luckyDay = 0, unluckyDay = 0, luckyOrUnluckyAmount = 0;
-        	static int maxWin = 0, maxLoss = 0;// to store maximum win and maximum loss
 		final static int DAYS_LIMIT = 30;                
 		final static String CONTINUE = "YES";
 		static String gamblerChoice;	
