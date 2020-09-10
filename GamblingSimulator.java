@@ -39,11 +39,11 @@ class GamblingSimulator
         	        	initialAmount = 100;
                
 		 		// Daily report start
-                		while(initialAmount > STOP_IF_LOOSES && initialAmount < STOP_IF_WIN)
+                		while( initialAmount > STOP_IF_LOOSES && initialAmount < STOP_IF_WIN )
 				{
                 
 					int gameResult = getRandom();
-                			if (gameResult > 0)
+                			if ( gameResult > 0 )
 						
                 				++initialAmount;
 					
@@ -54,7 +54,7 @@ class GamblingSimulator
                		 	}// Daily report end
                
 		 		// Condition for resign
-                		if(initialAmount == STOP_IF_LOOSES)
+                		if( initialAmount == STOP_IF_LOOSES )
 				{
 	
                 			System.out.println("He Lost $"+initialAmount+ " with the "+day+" day");
@@ -73,11 +73,11 @@ class GamblingSimulator
 			System.out.println("<------------------------------------------------------>");
         
 			// Condition to check whether its a Loss Or Win with respect to Twenty days
-       			if(twentyDayLoss > twentyDayWin)
+       			if( twentyDayLoss > twentyDayWin )
 				
         			System.out.println("The total amount lost is $"+(twentyDayLoss - twentyDayWin));
 			
-        		else if(twentyDayLoss == twentyDayWin)
+        		else if( twentyDayLoss == twentyDayWin )
 				
        				System.out.println("The Loss or Win is $0");
 			
