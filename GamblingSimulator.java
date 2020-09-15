@@ -89,7 +89,7 @@ class GamblingSimulator
                 
 		public static void main(String args[])
 		{        
-		welcomeMsg();
-       	 	monthReport();	
+			welcomeMsg();
+       	 		monthReport();	
 		}
 	}
