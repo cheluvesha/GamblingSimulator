@@ -2,12 +2,11 @@
 import java.util.Random;
 class GamblingSimulator
 	{
-        
 		static int stakeAmount = 100;
-        	final static int BET_AMOUNT = 1;
+        	static final int BET_AMOUNT = 1;
 		static double percentage = 50.00;
-        	final static int STOP_IF_WIN = stakeAmount + (int)(( percentage /  100 * stakeAmount ));// 50% profit with additional to initial amount
-       		final static int STOP_IF_LOOSES = stakeAmount - (int)(( percentage /  100 * stakeAmount ));// 50% loss with respect to stakeAmount
+        	static final int STOP_IF_WIN = stakeAmount + (int)(( percentage /  100 * stakeAmount ));// 50% profit with additional to initial amount
+       		static final int STOP_IF_LOOSES = stakeAmount - (int)(( percentage /  100 * stakeAmount ));// 50% loss with respect to stakeAmount
 
 		// Welcome message
         	private static void welcomeMsg()
@@ -21,47 +20,33 @@ class GamblingSimulator
        		// Random number generation
         	private static int getRandom()
 		{
-	
                 	Random random =	new Random();
                 	return random.nextInt(2);
-        
 		}
 	
         	// Win or Loose condition
         	private static void resignForTheDay()	
 		{
-        
-	        	while( stakeAmount > STOP_IF_LOOSES && stakeAmount < STOP_IF_WIN )
+       			while( stakeAmount > STOP_IF_LOOSES && stakeAmount < STOP_IF_WIN )
 			{
-	
-                		int gameResult = getRandom();
-                		if ( gameResult > 0 )
-					
+				int gameResult = getRandom();
+                		if ( gameResult > 0 )	
               				++stakeAmount;
-				
-                		else
-					
+                		else	
                 			--stakeAmount;
-            
 	 		}
 
                 	// Condition to check whether he has to resign for the day.
                 	if( stakeAmount == STOP_IF_LOOSES )
-				
 	                	System.out.println("He Lost $"+stakeAmount+ " for a day");
-			
                 	else
-				
-        	        	System.out.println("He Won $"+(stakeAmount - 100)+ " for a day");
-                                                                                        
+				System.out.println("He Won $"+(stakeAmount - 100)+ " for a day"):                                                                
         		}
 
-public static void main(String args[])
-	{
-	
-        	welcomeMsg();
-        	resignForTheDay();
-	
-	}
+		public static void main(String args[])
+		{
+			welcomeMsg();
+        		resignForTheDay():	
+		}
 	}
 
