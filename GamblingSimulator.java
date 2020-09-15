@@ -87,9 +87,9 @@ class GamblingSimulator
 			return gamblerChoice.equals(CONTINUE);
 		}
                 
-	public static void main(String args[])
-	{        
+		public static void main(String args[])
+		{        
 		welcomeMsg();
        	 	monthReport();	
+		}
 	}
-}
