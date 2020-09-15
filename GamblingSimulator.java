@@ -11,9 +11,9 @@ class GamblingSimulator
 			System.out.println("<---------------------------------------------------------------------------->");
 		}
 
-public static void main(String args[])
-	{
-        	welcomeMsg();
-	}
+		public static void main(String args[])
+		{
+        		welcomeMsg();
+		}
 	}
 
